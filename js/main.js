@@ -224,20 +224,20 @@ HINTS:
 **************************************************************************************/
 (function() {
   "use strict";
-
-  var goodStanding = false;
-  var monthsActive = 2;
+var goodStanding = true;
+var monthsActive = 18;
 
   //Do not modify 'name' globaly.
   var name = null;
 
-
-
   var benefit = {};
+
+benefit['credit'] = 50;
+benefit['discount'] = 5;
   //Add properties to 'benefit' using braket notation
 
   var accountCheck = function() {
-    name = 'james';
+name = 'James';
     var greeting = function() {
 
       return "Hello " + name + ". Here is the status of your account.";
@@ -275,12 +275,10 @@ HINTS:
       }
     }
     //Here 'accountCheck' should return both the 'greeting' output and the 'accountStat' output.
+return greeting() + ' ' + accountStat();
   };
 
-  benefit['credit']=50;
-  benefit['discount']=5;
-
-    accountCheck();
+accountCheck();
 
   console.log("#8 accountCheck():", accountCheck());
   console.assert(name == "James", "Test failed. You should set 'name' to 'james' from within accountCheck()");
