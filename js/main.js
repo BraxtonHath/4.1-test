@@ -233,11 +233,11 @@ HINTS:
 
 
 
-  var benefit = {}
+  var benefit = {};
   //Add properties to 'benefit' using braket notation
 
   var accountCheck = function() {
-    name ='james';
+    name = 'james';
     var greeting = function() {
 
       return "Hello " + name + ". Here is the status of your account.";
